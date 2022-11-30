@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Basquete</title>
+</head>
+<body>
+  <h1>Lista de Jogadores de Basquete</h1>
+  <hr>
+  <table>
+    <thead>
+      <tr>
+        <th>Jogador</th>
+        <th>Time</th>
+        <th>Idade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="basquete:${basquete}">
+        <td th:text="${basquete.jogador}">Jogador</td>
+        <td th:text="${basquete.time}">Time</td>
+        <td th:text="${basquete.idade}">Idade</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
